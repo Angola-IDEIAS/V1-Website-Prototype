@@ -25,3 +25,5 @@ iron:router
 accounts-password
 aldeed:collection2
 aldeed:autoform
+useraccounts:bootstrap
+useraccounts:iron-routing

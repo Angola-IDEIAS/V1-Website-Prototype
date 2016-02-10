@@ -1,22 +1,6 @@
 <template name="Login">
   <div class="user-registration-form">
-    {{> CreateUserForm}}
+    <!-- atForm comes from useraccounts:bootstrap -->
+    {{> atForm}}
   </div>
-</template>
-
-<template name="CreateUserForm">
-  {{#autoForm schema=schema id="createUserForm" type="method" meteormethod="createUserAutoform"}}
-  <fieldset>
-    <legend>Contact Us</legend>
-    {{> afQuickField name="username"}}
-    {{> afQuickField name="email"}}
-    {{> afQuickField name="password"}}
-    {{> afQuickField name="passwordConfirmation"}}
-  </fieldset>
-  <!-- <div> -->
-  <button type="submit" class="btn btn-primary">Submit</button>
-    <!-- <button type="reset" class="btn btn-default">Reset</button> -->
-  <!-- </div> -->
-
-  {{/autoForm}}
 </template>
