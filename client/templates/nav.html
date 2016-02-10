@@ -1,0 +1,49 @@
+<template name="Nav">
+  <div class="nav-container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid navbar-inner">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-pimp" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- TODO: reduce resolution of image -->
+          <a class="navbar-brand" href="/">
+            Angola IDEIAS
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-ai">
+          <ul class="nav navbar-nav">
+            <li><a href="/about">About</a></li>
+            <li><a href="/registeridea">Register idea</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>{{> accountButtons}}</li>
+          </ul>          
+        </div><!-- /.navbar-collapse -->
+      </div><!-- / container-fluid -->
+    </nav><!-- / navbar -->  
+  </div>
+
+</template>
+
+<template name="accountButtons">
+  {{#if currentUser}}
+    {{> LogoutButton}}
+  {{else}}
+    {{> LoginButton}}
+  {{/if}}
+</template>
+
+<template name="LoginButton">
+  <a href="/login">Login</a>
+</template>
+
+<template name="LogoutButton">
+  <a href="/logout">Logout</a>
+</template>
