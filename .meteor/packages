@@ -28,3 +28,5 @@ useraccounts:iron-routing
 accounts-google
 accounts-ui
 accounts-facebook
+accounts-base
+service-configuration
