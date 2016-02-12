@@ -5,21 +5,21 @@ var provinces = {
 };
 
 Template.updateUserInfoForm.events({
-  'change #selectedSex': function() {
-    Session.set('selectedSex', $('select#selectedSex').val());
+  'change #selectedProvince': function() {
+    Session.set('selectedProvince', $('select#selectedProvince').val());
   }
 });
 
 Template.updateUserInfoForm.helpers({
-  provinceOptions: function() {
+  communeOptions: function() {
     
     // do not provide options until user has selected sex
-    if (!Session.get('selectedSex')) {
+    if (!Session.get('selectedProvince')) {
       return null;
     };
 
     // retrieve options
-    var unlabeledOptions = provinces[Session.get('selectedSex')];
+    var unlabeledOptions = province_to_commune[Session.get('selectedProvince')];
     
     // format options correctly for autoform
     var labeledOptions = unlabeledOptions.map(function(p) {
