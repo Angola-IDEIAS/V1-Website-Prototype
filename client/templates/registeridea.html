@@ -1,4 +1,18 @@
 <template name="RegisterIdea">
-  
-  Register idea
+  Text information about idea registration.
+  Quanto mais informações você dá sobre seu idéia, maiores as chances de que seu idéia recebe financiamento ### Allow people to leave fields blank for now
+  {{> registerIdeaForm}}
+</template>
+
+
+<template name="registerIdeaForm">
+  {{#autoForm collection="Ideas" id="registerIdeaForm" type="insert"}}
+    <fieldset>
+      {{> afQuickField name="idea_name"}}
+      {{> afQuickField name="objective" type="select-radio" options="allowed"}}
+      {{> afQuickField name="industry" options="allowed"}}
+
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
 </template>

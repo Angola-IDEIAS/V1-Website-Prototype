@@ -8,5 +8,13 @@
 <template name="Home">
   
   Home
+  {{#each ideas}}
+    {{> Idea}}
+  {{/each}}
 
+</template>
+
+
+<template name="Idea">
+  {{name}}
 </template>

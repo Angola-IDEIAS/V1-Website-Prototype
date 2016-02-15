@@ -11,10 +11,9 @@ Retrieve more user information on registration here
 <template name="updateUserInfoForm">
   {{#autoForm collection="UserInfo" id="updateUserInfoForm" type="method" meteormethod="updateUserInfo"}}
     <fieldset>
-      <legend>More information</legend>
       {{> afQuickField name='first_name'}}
       {{> afQuickField name='last_name'}}
-      {{> afQuickField name='sex' options="allowed" id="selectedSex"}}
+      {{> afQuickField name='sex' options="allowed" type="select-radio" id="selectedSex"}}
       {{> afQuickField name='dob'}}
       {{> afQuickField name='ethnic_group' options="allowed" id="selectedEthnicGroup"}}
       {{> afQuickField name='province' options="allowed" id="selectedProvince"}}
