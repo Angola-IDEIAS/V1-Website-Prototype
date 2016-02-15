@@ -17,8 +17,12 @@ Meteor.methods({
         finished_registration: true
       }
     });
-    console.log(Meteor.users.findOne(this.userId));
+  },
+
+  finishedRegistration: function() {
+    return Meteor.users.findOne(Meteor.userId()).finished_registration;
   }
+
 });
 
 

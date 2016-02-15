@@ -21,7 +21,10 @@
             <li><a href="/about">About</a></li>
             {{#if registeredUser}}
               <li><a href="/registeridea">Register idea</a></li>
+            {{else}}
+              <li><a href="/userinfo">Finish account registration</a></li>
             {{/if}}
+
           </ul>
 
           <ul class="nav navbar-nav navbar-right">

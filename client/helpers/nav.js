@@ -1,10 +1,22 @@
 
 Template.Nav.helpers({
   registeredUser: function() {
-    // update for client access
-    if (Meteor.user() && Meteor.users.findOne(Meteor.user()).finished_registration == true) {
-      return true;
-    };
-    return false;
+    
+    // if user not logged in, always return false
+    if (!Meteor.userId()) {
+      console.log('returned false');
+      return false;
+    }
+
+    Meteor.call('finishedRegistration', function(error, result){
+      Session.set('finishedRegistration', result);
+    });
+
+    if (Session.get('finishedRegistration') == true) {
+      return true
+    }
+    else {
+      return false;
+    }
   }
 });
