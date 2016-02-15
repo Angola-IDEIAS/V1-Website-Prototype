@@ -29,3 +29,5 @@ accounts-google
 accounts-ui
 accounts-base
 service-configuration
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker
