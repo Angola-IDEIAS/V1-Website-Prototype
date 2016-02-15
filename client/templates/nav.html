@@ -22,7 +22,9 @@
             {{#if registeredUser}}
               <li><a href="/registeridea">Register idea</a></li>
             {{else}}
-              <li><a href="/userinfo">Finish account registration</a></li>
+              {{#if currentUser}}
+                <li><a href="/userinfo">Finish account registration</a></li>
+              {{/if}}
             {{/if}}
 
           </ul>
