@@ -1,6 +1,10 @@
 <template name="RegisterIdea">
-  Text information about idea registration.
-  Quanto mais informações você dá sobre seu idéia, maiores as chances de que seu idéia recebe financiamento ### Allow people to leave fields blank for now
+  
+  <h1>Cadastre sua idéia</h1>
+
+  <p>Quanto mais informações você dá sobre seu idéia, maiores as chances de que seu idéia recebe financiamento.</p>
+  <br>
+
   {{> registerIdeaForm}}
 </template>
 
@@ -9,8 +13,27 @@
   {{#autoForm collection="Ideas" id="registerIdeaForm" type="insert"}}
     <fieldset>
       {{> afQuickField name="idea_name"}}
-      {{> afQuickField name="objective" type="select-radio" options="allowed"}}
       {{> afQuickField name="industry" options="allowed"}}
+
+      {{> afQuickField name="objective" type="select-radio" options="allowed" id="idea-objective"}}
+
+      <!-- fields if user says it is a business project -->
+      {{#if is_business_project}}
+
+        {{> afQuickField name="location" type="select-radio" options="allowed"}}
+
+        {{> afQuickField name="startup_size" type="select-radio" options="allowed"}}      
+
+        {{> afQuickField name="register_formally" type="select-radio" options="allowed"}}      
+
+        {{> afQuickField name="service_or_product" type="select-radio" options="allowed"}}  
+
+      <!-- fields if user says it is a community project -->
+      {{else}}
+      
+        {{> afQuickField name="impact_area" type="select-radio" options="allowed"}}  
+
+      {{/if}}
 
     </fieldset>
     <button type="submit" class="btn btn-primary">Insert</button>
