@@ -3,14 +3,15 @@
 Template.Home.helpers({
   ideas: function () {
     var ideas = Ideas.find({}, {sort: {createdAt: -1}}).fetch();
-    var ideasNames = []
+    var ideaNames = []
 
     for (idea in ideas) {
       console.log(idea);
-      ideasNames.push({
+      ideaNames.push({
         name: idea.idea_name
       });
-    }
-    return ideasNames;
+    };
+    console.log(ideaNames);
+    return ideaNames;
   }
 });

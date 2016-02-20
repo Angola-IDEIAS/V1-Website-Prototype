@@ -18,12 +18,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-ai">
           <ul class="nav navbar-nav">
-            <li><a href="/about">About</a></li>
+            <li><a href="/about">Sobre Angola IDEIAS</a></li>
             {{#if registeredUser}}
-              <li><a href="/registeridea">Register idea</a></li>
+              <li><a href="/registeridea">Cadastre uma idéia</a></li>
             {{else}}
               {{#if currentUser}}
-                <li><a href="/userinfo">Finish account registration</a></li>
+                <li><a href="/userinfo">Termine cadastro de usuáro</a></li>
               {{/if}}
             {{/if}}
 
@@ -48,9 +48,9 @@
 </template>
 
 <template name="LoginButton">
-  <a href="/login">Login</a>
+  <a href="/login">Entre</a>
 </template>
 
 <template name="LogoutButton">
-  <a href="/logout">Logout</a>
+  <a href="/logout">Sair</a>
 </template>
