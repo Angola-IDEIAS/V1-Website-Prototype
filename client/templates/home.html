@@ -6,9 +6,9 @@
 </body>
 
 <template name="Home">
-
-  <img src="/img/Logo_Nov2015.png" id="home-logo">
-  
+  <div class="home-logo-container">
+    <img src="/img/Logo_Nov2015.png">
+  </div>
   
   {{#each ideas}}
     {{> Idea}}
@@ -18,5 +18,11 @@
 
 
 <template name="Idea">
-  {{name}}
+  <div class="idea-container">
+    <h3>{{name}}</h3>
+    <p>Objetivo: {{objective}}</p>
+    <p>Indústria: {{industry}}</p>
+
+  </div>
+
 </template>

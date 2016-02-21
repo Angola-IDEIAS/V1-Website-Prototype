@@ -2,16 +2,17 @@
 
 Template.Home.helpers({
   ideas: function () {
-    var ideas = Ideas.find({}, {sort: {createdAt: -1}}).fetch();
     var ideaNames = []
-
-    for (idea in ideas) {
+    var ideas = Ideas.find();
+    ideas.forEach(function(idea) {
       console.log(idea);
       ideaNames.push({
-        name: idea.idea_name
+        name: idea.idea_name,
+        objective: idea.objective,
+        industry: idea.industry,
       });
-    };
-    console.log(ideaNames);
+    });
+    
     return ideaNames;
   }
 });
