@@ -1,0 +1,18 @@
+<template name="CreateProblem">
+  
+  <h1>Cadastre seu problema</h1>
+
+  {{> createProblemForm}}
+</template>
+
+<template name="createProblemForm">
+  {{#autoForm collection="Problems" id="createProblemForm" type="insert"}}
+    <fieldset>
+      {{> afQuickField name="problem_name"}}
+      {{> afQuickField name="industry" options="allowed"}}
+      {{> afQuickField name="problem_description" rows=5}}
+
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+</template>
