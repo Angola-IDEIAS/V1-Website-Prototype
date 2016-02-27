@@ -51,17 +51,16 @@ body {
     margin: 1em;
 }
 
+.ideas-and-problems {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-.idea-container {
+
+.idea-problem-container {
     margin: 2em;
     padding: 1em;
     border: solid 2px;
 }
 
-
-
-/* Customize the text color and shadow color and to optimize text legibility. */
-
-.tagline {
-    color: #fff;
-}

@@ -4,7 +4,6 @@ Template.Nav.helpers({
     
     // if user not logged in, always return false
     if (!Meteor.userId()) {
-      console.log('returned false');
       return false;
     }
 

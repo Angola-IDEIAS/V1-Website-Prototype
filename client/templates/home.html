@@ -36,22 +36,43 @@
 
   </div>
 
+  <div class="ideas-and-problems">
+    <ul class="nav nav-pills">
+      <li class="active"><a data-toggle="pill" href="#view-problems">Problems</a></li>
+      <li><a data-toggle="pill" href="#view-ideas">Ideias</a></li>
+    </ul>
 
-  <div class="ideas-display">
-    {{#each ideas}}
-      {{> Idea}}
-    {{/each}}
+    <div class="tab-content">
+      <div id="view-problems" class="tab-pane fade in active">
+        {{#each problems}}
+          {{> Problem}}
+        {{/each}}
+      </div>
+      <div id="view-ideas" class="tab-pane fade">
+          <div class="ideas-display">
+            {{#each ideas}}
+              {{> Idea}}
+            {{/each}}
+          </div>
+      </div>
+    </div>
+
   </div>
 
 </template>
 
+<template name="Problem">
+  <div class="idea-problem-container">
+    <h3>{{problem_name}}</h3>
+    <p>Area de ação: {{impact_area}}</p>
+    <p>Localização do problema: {{problem_location}}</p>
+  </div>
+</template>
 
 <template name="Idea">
-  <div class="idea-container">
+  <div class="idea-problem-container">
     <h3>{{name}}</h3>
     <p>Objetivo: {{objective}}</p>
     <p>Indústria: {{industry}}</p>
-
   </div>
-
 </template>

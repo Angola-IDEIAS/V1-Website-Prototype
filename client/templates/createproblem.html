@@ -11,8 +11,13 @@
   {{#autoForm collection="Problems" id="createProblemForm" type="insert"}}
     <fieldset>
       {{> afQuickField name="problem_name"}}
-      {{> afQuickField name="industry" options="allowed"}}
+      {{> afQuickField name="impact_area" options="allowed"}}
+      {{> afQuickField name="problem_location" options="allowed"}}
+      {{> afQuickField name='province' options="allowed" id="problemSelectedProvince"}}
+      {{> afQuickField name='commune' options=communeOptions id="problemsSelectedCommune"}}
+      {{> afQuickField name="companies_or_projects" options="allowed"}}
       {{> afQuickField name="problem_description" rows=5}}
+      {{> afQuickField name="solution_ideas" rows=5}}
 
     </fieldset>
     <button type="submit" class="btn btn-primary">Insert</button>

@@ -2,17 +2,31 @@
 
 Template.Home.helpers({
   ideas: function () {
-    var ideaNames = []
-    var ideas = Ideas.find();
-    ideas.forEach(function(idea) {
+    var ideas = []
+    Ideas.find().forEach(function(idea) {
       console.log(idea);
-      ideaNames.push({
+      ideas.push({
         name: idea.idea_name,
         objective: idea.objective,
         industry: idea.industry,
       });
     });
     
-    return ideaNames;
-  }
+    return ideas;
+  },
+
+  problems: function () {
+    var problems = []
+    Problems.find().forEach(function(problem) {
+      console.log(problem);
+      problems.push({
+        problem_name: problem.problem_name,
+        impact_area: problem.impact_area,
+        location: problem.problem_location
+      });
+    });
+    
+    return problems;
+  },
 });
+
