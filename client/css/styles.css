@@ -3,14 +3,33 @@ body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-.business-header {
+
+.home-header {
     height: 300px;
-    background: url('http://placehold.it/1920x400') center center no-repeat scroll;
+    background: url('img/sticky_notes.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
+.header-text-container {
+    width: 80%;
+    height: 50%;
+    margin-top: 5em;
+    margin-bottom: auto;
+
+    background-color: #ffffff;
+    opacity: 0.6;
+    
+}
+
+.header-text-container h1 {
+    font-size: 72px;
+    font-weight: bold;
+    color: #000000;
+}
+
 
 .user-action-select {
     width: 60%;
