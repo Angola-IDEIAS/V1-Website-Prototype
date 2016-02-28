@@ -4,8 +4,14 @@ body {
 }
 
 
+.navbar-fixed-top {
+    font-weight: 700;
+}
+
+/* Home page */
+
 .home-header {
-    height: 350px;
+    height: 500px;
     background: url('img/sticky_notes.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -14,49 +20,29 @@ body {
 }
 
 .home-header img {
-    height: 350px;
+    height: 400px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.header-text-contaier {
-    width: 80%;
-    height: 50%;
-    margin-top: 5em;
-    margin-bottom: auto;
-
-    background-color: #ffffff;
-    opacity: 0.6;    
-}
-
-.header-text-container h1 {
-    font-size: 72px;
-    font-weight: bold;
-    color: #000000;
-    margin-left: 2em;
-}
-
-.header-text-container img {
-    height: 10em;
-    float: left;
-}
-
-.form-page {
-    width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 
 
 .user-action-select {
-    width: 60%;
+    width: 80%;
     margin: 2em auto;
     text-align: center;
 }
 
-.user-action-select .btn {
+.user-action-select-btn {
+    background-color: #C33636;
+    border: none;
+    color: #fff;
+    width: 15em;
+}
 
+.user-action-select-btn h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .btn-select-action {
@@ -67,12 +53,22 @@ body {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3em;
 }
 
 
 .idea-problem-container {
-    margin: 2em;
+    margin: 2em 0;
     padding: 1em;
-    border: solid 2px;
+    border: solid 1px;
+    border-color: #ddd;
+}
+
+
+
+.form-page {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 

@@ -2,17 +2,28 @@
   <div class="form-page">
   
     <h1>Cadastre sua idéia</h1>
+    
+    {{#if registeredUser}}
+      {{> registerIdeaForm}}
+    {{else}}
+      {{#if currentUser}}
+        <div id="finish-user-registration-btn" class="btn btn-default">Termine cadastro de usuáro</div>
+      {{else}}
+        <div id="go-to-login-btn" class="btn btn-default">Entre com usuário</div>
+      {{/if}}
+    {{/if}}
 
-    <p>Quanto mais informações você dá sobre seu idéia, maiores as chances de que seu idéia recebe financiamento.</p>
-    <br>
-
-    {{> registerIdeaForm}}
 
   </div>
 </template>
 
 
+
 <template name="registerIdeaForm">
+
+    <p>Quanto mais informações você dá sobre seu idéia, maiores as chances de que seu idéia recebe financiamento.</p>
+    <br>
+
   {{#autoForm collection="Ideas" id="registerIdeaForm" type="insert"}}
     <fieldset>
       {{> afQuickField name="idea_name"}}
